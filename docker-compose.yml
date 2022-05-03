@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  # Nuxt.js (Node.js) 開発環境
+  nodejs:
+    build:
+      context: ./
+      target: base
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./myapp:/myapp
+    working_dir: /myapp
+    tty: true
+    entrypoint: bash
